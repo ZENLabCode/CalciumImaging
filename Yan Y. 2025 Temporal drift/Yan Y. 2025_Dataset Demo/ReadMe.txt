@@ -1,6 +1,6 @@
 ﻿# Calcium Imaging Event Detection - Demo Dataset
 
-This demo dataset accompanies the **Calcium Imaging Events Based Analysis - Lite 1.14.7** toolbox. It provides a complete example workflow, from raw data input to event detection and export, using MATLAB-based GUI tools.
+This demo dataset accompanies the **Calcium Imaging Events Based Analysis - Lite 1.15.1** toolbox. It provides a complete example workflow, from raw data input to event detection and export, using MATLAB-based GUI tools.
 
 ---
 
@@ -14,7 +14,7 @@ This demo dataset accompanies the **Calcium Imaging Events Based Analysis - Lite
   - **Data Acquisition Toolbox**
   - **Curve Fitting Toolbox**
   - **Statistics and Machine Learning Toolbox**
-- **Calcium Imaging Events Based Analysis - Lite 1.14.7**
+- **Calcium Imaging Events Based Analysis - Lite 1.15.1**
 
 ### Hardware
 - Standard desktop or laptop computer
@@ -31,7 +31,7 @@ This demo dataset accompanies the **Calcium Imaging Events Based Analysis - Lite
 2. Open MATLAB and navigate to the directory containing:
    - `CalciumImaging_GUI.mlapp`
    or directly open `CalciumImaging_GUI.mlapp` from the 
-   `Calcium Imaging Events Based Analysis - Lite 1.14.7` folder
+   `Calcium Imaging Events Based Analysis - Lite 1.15.1` folder
 3. This step takes only a few seconds.
 ---
 
@@ -84,7 +84,7 @@ Before opening the script, first close the GUI and use the "clear" command in MA
 2. **Analyze the Output**
    - Navigate to the following script:
      ```
-     Calcium Imaging Events Based Analysis - Lite 1.14.7/
+     Calcium Imaging Events Based Analysis - Lite 1.15.1/
      └── Functions/
          └── New Analysis/
              └── Sessions_Analysis_v2.m
@@ -94,7 +94,7 @@ Before opening the script, first close the GUI and use the "clear" command in MA
 The script has a semi-automatic execution, and is intended to be mostly run section by section, depending on what analysis is needed. The first 2 sections, however (Options and Inizialization) must always be run.
 
 The analysis and plots found in this script are: 
-Events Clustering, Clustering Changes, single-cell State Selectivity Analysis, State Selectivity flow plot ("Clustering flow evolution"), Average calcium traces across state transitions, Events Rates averages and changes, Correlation-based graph analysis.
+Active wake detection, Events Clustering, Clustering Changes, single-cell State Selectivity Analysis, State Selectivity flow plot ("Clustering flow evolution"), Average calcium traces across state transitions, Events Rates averages and changes, Correlation-based graph analysis, plot example raw traces. 
 Each analysis should be automatically producing and saving the relative plots that constitute the figures used in the paper.
    
  - All the analysis are based on "Events_Rate" in this study, but other options are possible by defining: Opts.ClusteringVariable.
@@ -102,4 +102,5 @@ Each analysis should be automatically producing and saving the relative plots th
 The dataset for all the mouse strains included in this study can be provided upon request. 
 Please contact:  antoine.adamantidis@unibe.ch 
   
+
 
