@@ -47,25 +47,25 @@ This demo dataset accompanies the **Calcium Imaging Events Based Analysis - Lite
 ## 3. Demo
 
 ### Input Data
-Each mouse (6 Vgat mice included in the demo) has **21 recording sessions**. Each session contains:
+Each mouse (2 MCH mice included in the demo) has **21 recording sessions**. Each session contains:
 - Sleep hypnogram (scored from EEG/EMG, 1=wake, 2= NREM, 4= REM)
 - Normalized calcium imaging signal (ΔF/F)
-- EMG signal
+- (EMG signal is not included in the data demo due to size limitation, but can be found in the dataset shared with the paper.) 
 
 ### Running the Demo-Dataset1
 1. Open `CalciumImaging_GUI.mlapp` in MATLAB.
 2. Select the FileName for the output file, and the Folder you want to save the file in.
 3. Use default settings,
--Optional: some data might have extra empty, blank images, in case you want to remove these, select the Cut Zeros option. Similarly adjust other options if needed.
+-Optional: Some data might have extra empty, blank images; in case you want to remove these, select the Cut Zeros option. Similarly, adjust other options if needed.
 
 3. Click "Start event detection" (MATLAB App Designer required).
-4. Choose the dataset in the Dataset1 folder: Vgat 
-5. Event detection starts, a progress bar will appear and progress will also be reported in Matlab's Command Window.
+4. Choose the dataset in the Dataset1 folder: MCH
+5. Event detection starts, a progress bar will appear and progress will also be reported in MATLAB's Command Window.
 - At the end of the analysis, make sure the file was saved.
 
 
 ### Runtime
-- **~10 hours** for the demo-Dataset1 (depends on computer specs)
+- **~10-30 min** for the demo-Dataset1 (depends on computer specs)
 
 
 ### Expected Output
@@ -82,13 +82,13 @@ Each mouse (6 Vgat mice included in the demo) has **21 recording sessions**. Eac
 ### Running the extra analysis
 - Now run the second part of the analysis to prepare the plots.
 - Some plots can be run via the GUI (Analysis 1, Analysis 2)
-- Most plots must be run via a more specific script "Session_Analysis_v2".
+- Most plots must be run via a more specific script, "Session_Analysis_v2".
 Before opening the script, first close the GUI and use the "clear" command in MATLAB.
 
 1. **Load the Output File**
    - Open MATLAB.
    - Load the output file from the path you set:
-   - This `.mat` file contains calcium event information detected across different sleep states of 6 Vgat mouse.
+   - This `.mat` file contains calcium event information detected across different sleep states of each mouse.
 
 2. **Analyze the Output**
    - Navigate to the following script:
@@ -103,10 +103,11 @@ Before opening the script, first close the GUI and use the "clear" command in MA
 The script has a semi-automatic execution, and is intended to be mostly run section by section, depending on what analysis is needed. The first 2 sections, however (Options and Initializations) must always be run.
 
 The analysis and plots found in this script are: 
-Active wake detection, Events Clustering, Clustering Changes, single-cell State Selectivity Analysis, State Selectivity flow plot ("Clustering flow evolution"), Average calcium traces across state transitions, Events Rates averages and changes, Correlation-based graph analysis, plot example raw traces. 
-Each analysis should be automatically producing and saving the relative plots that constitute the figures used in the paper.
+Active wake detection (not available with data demo, need EMG signal), Events Clustering, Clustering Changes, single-cell State Selectivity Analysis, State Selectivity flow plot ("Clustering flow evolution"), Average calcium traces across state transitions, Events Rates averages and changes, Correlation-based graph analysis, plot example raw traces. 
+Each analysis should be automatically produced and save the relevant plots that constitute the figures used in the paper.
    
- - All the analysis are based on "Events_Rate" in this study, but other options are possible by defining: Opts.ClusteringVariable.
+ - All the analyses are based on "Events_Rate" in this study, but other options are possible by defining: Opts.ClusteringVariable.
    
 The dataset for all the mouse strains included in this study can be provided upon request. 
+
 Please contact:  antoine.adamantidis@unibe.ch 
